@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.models import  Product, session,User,datetime,Sale,Payment
+from app.models import  Product, session,User,datetime,Sale,Payment,engine,Base
 from jwt.exceptions import InvalidTokenError
 from pwdlib import PasswordHash
 from datetime import datetime
@@ -24,6 +24,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.on_event("startup")
+def on_startup():
+    print("Creating database tables if they don't exist...")
+    Base.metadata.create_all(bind=engine)
 
 
 
