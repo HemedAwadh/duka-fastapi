@@ -1,0 +1,12 @@
+ersion: "3.9"
+
+services:
+  fastapi:
+    build: .
+    container_name: fastapi
+    ports:
+      - "9000:80"
+    restart: always
+
+
+    #docker compose is used to write all commands needed to build and run a container
