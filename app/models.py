@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 from datetime import datetime
 
 #engine = create_engine('postgresql://postgres:admin@localhost:5432/flask_api')
-engine=create_engine('postgresql://myduka_user:Admin123@172.17.0.1:5432/myduka_api')
+engine=create_engine('postgresql://myduka_user:admin@172.17.0.1:5432/myduka_api')
 session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 #create models
