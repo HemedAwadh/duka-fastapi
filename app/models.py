@@ -45,6 +45,10 @@ class Payment(Base):
     trans_code = Column(String(100), nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
+    
+
+Base.metadata.create_all(bind=engine)    
+
 
 
     #docker run -v d:\FLASK_API\app:/app/database/database.db -p 127.0.0.1:5000:80 -t flask-api
