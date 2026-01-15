@@ -23,7 +23,7 @@ app = FastAPI(title="Duka FastAPI", version="1.0")
 # CORS
 # -----------------------------
 origins = [
-    "http://localhost:3000",
+    "*"
 ]
 
 app.add_middleware(
