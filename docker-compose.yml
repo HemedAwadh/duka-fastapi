@@ -7,4 +7,4 @@ services:
     restart: always
 
 
-    #docker compose is used to write all commands needed to build and run a container
+    #docker compose is used to write all commands needed to build and run a container.
