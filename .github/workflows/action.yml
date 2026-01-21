@@ -51,7 +51,7 @@ jobs:
             ls -la
 
             echo "Changing to VPS_PATH:"
-            cd $VPS_PATH
+            cd /home/duka-fastapi
 
             echo "Listing VPS_PATH contents:"
             ls -la
